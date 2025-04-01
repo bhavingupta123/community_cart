@@ -1,33 +1,18 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Redirecting...</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="refresh" content="0;url=https://communitycart.in/">
     <script>
-      // Immediately check and redirect
-      (function () {
-        var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+      var ua = navigator.userAgent || navigator.vendor || window.opera;
 
-        if (/android/i.test(userAgent)) {
-          location.replace("https://play.google.com/store/apps/details?id=com.communitycart.store");
-        } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
-          location.replace("https://apps.apple.com/in/app/community-cart-grocery-app/id6569255605");
-        } else {
-          location.replace("https://communitycart.in/");
-        }
-      })();
+      if (/android/i.test(ua)) {
+        location.replace("https://play.google.com/store/apps/details?id=com.communitycart.store");
+      } else if (/iPad|iPhone|iPod/.test(ua) && !window.MSStream) {
+        location.replace("https://apps.apple.com/in/app/community-cart-grocery-app/id6569255605");
+      } else {
+        location.replace("https://communitycart.in/");
+      }
     </script>
   </head>
-  <body>
-    <noscript>
-      <h2>Please enable JavaScript to be redirected.</h2>
-      <p>Or choose your platform:</p>
-      <ul>
-        <li><a href="https://apps.apple.com/in/app/community-cart-grocery-app/id6569255605">iOS App Store</a></li>
-        <li><a href="https://play.google.com/store/apps/details?id=com.communitycart.store">Google Play Store</a></li>
-        <li><a href="https://communitycart.in/">Website</a></li>
-      </ul>
-    </noscript>
-  </body>
+  <body></body>
 </html>
