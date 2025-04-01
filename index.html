@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Redirecting to Community Cart App...</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+    window.onload = function() {
+      var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+      if (/android/i.test(userAgent)) {
+        window.location.href = "https://play.google.com/store/apps/details?id=com.communitycart.store";
+      } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+        window.location.href = "https://apps.apple.com/in/app/community-cart-grocery-app/id6569255605";
+      } else {
+        // Optional: fallback for desktop or unknown devices
+        document.getElementById("fallback").style.display = "block";
+      }
+    };
+  </script>
+</head>
+<body>
+  <h2>Redirecting you to the Community Cart App...</h2>
+  <div id="fallback" style="display:none;">
+    <p>If you are not redirected, choose your platform:</p>
+    <ul>
+      <li><a href="https://apps.apple.com/in/app/community-cart-grocery-app/id6569255605">iOS App Store</a></li>
+      <li><a href="https://play.google.com/store/apps/details?id=com.communitycart.store">Google Play Store</a></li>
+    </ul>
+  </div>
+</body>
+</html>
